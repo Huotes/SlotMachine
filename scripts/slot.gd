@@ -22,3 +22,17 @@ func _handle_pulled() -> void:
 			row.rect_position.y = round(row.rect_position.y + MOVE)
 		
 		yield(get_tree().create_timer(time_interval),"timeout")
+		
+	match(row.rect_position.y):
+		0000.0: GameController.DIAMOND += 1
+		-560.0: GameController.DIAMOND += 1
+		-480.0: GameController.LEMON += 1
+		-400.0: GameController.CHERRY += 1
+		-320.0: GameController.SEVEN += 1
+		-240.0: GameController.BAR += 1
+		-160.0: GameController.WATERMELON += 1
+		-000.0: GameController.CROWN += 1
+		
+	GameController.POINTS += 1
+	owner.luck()
+
