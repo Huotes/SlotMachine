@@ -31,7 +31,7 @@ func _handle_pulled() -> void:
 		-320.0: GameController.SEVEN += 1
 		-240.0: GameController.BAR += 1
 		-160.0: GameController.WATERMELON += 1
-		-000.0: GameController.CROWN += 1
+		-000.0: GameController.CROW += 1
 		
 	GameController.POINTS += 1
 	owner.luck()

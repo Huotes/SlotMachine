@@ -6,6 +6,8 @@ onready var tween  := $Tween
 onready var handle := $Handle
 onready var winner := $Winner
 
+##funcao para puxar a alavanca e a magica acontecer
+
 func _on_Handle_pressed():
 	tween.interpolate_property(handle,"rect_rotation",0,-12,0.2,Tween.TRANS_BOUNCE,Tween.EASE_IN_OUT)
 	tween.interpolate_property(handle,"rect_rotation",-12,0,0.5,Tween.TRANS_BOUNCE,Tween.EASE_OUT,0.65)
@@ -25,9 +27,9 @@ func luck() -> void:
 		has_won(100)
 	elif GameController.DIAMOND == 3:
 		has_won(200)
-	if GameController.CROWN == 2:
+	if GameController.CROW == 2:
 		has_won(300)
-	elif GameController.CROWN == 3:
+	elif GameController.CROW == 3:
 		has_won(400)
 	if GameController.WATERMELON == 2:
 		has_won(500)
